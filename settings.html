@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>HR New Student Cafe - Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="p-4">
+  <div class="navbar">
+    <div class="logo">
+      <img alt="HR Hotel Logo" height="50" src="https://storage.googleapis.com/a1aa/image/xYzm5YdqYBOi3v3IQFs6dH7cw1dhlZta1q1CgajPlnk.jpg" width="50"/>
+    </div>
+    <div class="flex">
+      <a href="home.html">Home</a>
+      <a href="settings.html" class="active">Settings</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div>
+      <a class="mr-4" href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="settings-container mt-8">
+    <h1 class="text-3xl text-center mb-8">Account Settings</h1>
+    
+    <div class="settings-section">
+      <h2 class="section-title mb-4">Profile Information</h2>
+      <div class="settings-form">
+        <div class="form-group mb-4">
+          <label for="name" class="block mb-2">Full Name</label>
+          <input type="text" id="name" class="settings-input" placeholder="Enter your full name">
+        </div>
+        <div class="form-group mb-4">
+          <label for="email" class="block mb-2">Email Address</label>
+          <input type="email" id="email" class="settings-input" placeholder="Enter your email">
+        </div>
+        <div class="form-group mb-4">
+          <label for="phone" class="block mb-2">Phone Number</label>
+          <input type="tel" id="phone" class="settings-input" placeholder="Enter your phone number">
+        </div>
+        <div class="form-group mb-4">
+          <label for="address" class="block mb-2">Delivery Address</label>
+          <textarea id="address" class="settings-textarea" placeholder="Enter your delivery address"></textarea>
+        </div>
+        <button class="save-btn">Save Profile</button>
+      </div>
+    </div>
+    
+    <div class="settings-section mt-8">
+      <h2 class="section-title mb-4">Password Settings</h2>
+      <div class="settings-form">
+        <div class="form-group mb-4">
+          <label for="current-password" class="block mb-2">Current Password</label>
+          <input type="password" id="current-password" class="settings-input" placeholder="Enter current password">
+        </div>
+        <div class="form-group mb-4">
+          <label for="new-password" class="block mb-2">New Password</label>
+          <input type="password" id="new-password" class="settings-input" placeholder="Enter new password">
+        </div>
+        <div class="form-group mb-4">
+          <label for="confirm-password" class="block mb-2">Confirm New Password</label>
+          <input type="password" id="confirm-password" class="settings-input" placeholder="Confirm new password">
+        </div>
+        <button class="save-btn">Change Password</button>
+      </div>
+    </div>
+    
+    <div class="settings-section mt-8">
+      <h2 class="section-title mb-4">Notification Preferences</h2>
+      <div class="settings-form">
+        <div class="form-group mb-4">
+          <label class="flex items-center">
+            <input type="checkbox" class="mr-2">
+            Email notifications for new promotions
+          </label>
+        </div>
+        <div class="form-group mb-4">
+          <label class="flex items-center">
+            <input type="checkbox" class="mr-2">
+            SMS notifications for order updates
+          </label>
+        </div>
+        <div class="form-group mb-4">
+          <label class="flex items-center">
+            <input type="checkbox" class="mr-2">
+            Email notifications for order confirmations
+          </label>
+        </div>
+        <button class="save-btn">Save Preferences</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <p>© 2023 HR New Student Cafe Fast Food. All rights reserved.</p>
+    </div>
+    <div class="mt-2">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="mt-2">
+      <p>Contact: 8950781137</p>
+    </div>
+  </div>
+</body>
+</html> 

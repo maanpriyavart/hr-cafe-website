@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>HR New Student Cafe - Orders</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="p-4">
+  <div class="navbar">
+    <div class="logo">
+      <img alt="HR Hotel Logo" height="50" src="https://storage.googleapis.com/a1aa/image/xYzm5YdqYBOi3v3IQFs6dH7cw1dhlZta1q1CgajPlnk.jpg" width="50"/>
+    </div>
+    <div class="flex">
+      <a href="home.html">Home</a>
+      <a href="settings.html">Settings</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html" class="active">Orders</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div>
+      <a class="mr-4" href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="orders-container mt-8">
+    <h1 class="text-3xl text-center mb-8">Your Orders</h1>
+    
+    <div class="order-tabs flex justify-center mb-6">
+      <button class="tab-btn active">Current Orders</button>
+      <button class="tab-btn ml-4">Order History</button>
+      <button class="tab-btn ml-4" onclick="window.location.href='order-selection.html'">Place New Order</button>
+    </div>
+    
+    <div class="current-orders">
+      <div class="order-card">
+        <div class="order-header">
+          <div>
+            <h3 class="text-xl">Order #12345</h3>
+            <p class="text-sm">Placed on: June 15, 2023 at 2:30 PM</p>
+          </div>
+          <div class="order-status">
+            <span class="status-preparing">Preparing</span>
+          </div>
+        </div>
+        <div class="order-items mt-4">
+          <div class="order-item">
+            <div class="flex justify-between">
+              <span>2 x Veg Fried Rice</span>
+              <span class="price">₹180</span>
+            </div>
+          </div>
+          <div class="order-item">
+            <div class="flex justify-between">
+              <span>1 x Paneer Chilli Dry</span>
+              <span class="price">₹170</span>
+            </div>
+          </div>
+          <div class="order-item">
+            <div class="flex justify-between">
+              <span>4 x Veg Steam Momos</span>
+              <span class="price">₹280</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-total mt-4 pt-2 border-t border-gray-700">
+          <div class="flex justify-between">
+            <span>Total</span>
+            <span class="price">₹630</span>
+          </div>
+        </div>
+        <div class="order-actions mt-4 flex justify-between">
+          <button class="track-btn">Track Order</button>
+          <button class="cancel-btn">Cancel Order</button>
+        </div>
+      </div>
+      
+      <div class="order-card mt-6">
+        <div class="order-header">
+          <div>
+            <h3 class="text-xl">Order #12344</h3>
+            <p class="text-sm">Placed on: June 14, 2023 at 7:45 PM</p>
+          </div>
+          <div class="order-status">
+            <span class="status-delivered">Delivered</span>
+          </div>
+        </div>
+        <div class="order-items mt-4">
+          <div class="order-item">
+            <div class="flex justify-between">
+              <span>1 x Chicken Chowmein</span>
+              <span class="price">₹90</span>
+            </div>
+          </div>
+          <div class="order-item">
+            <div class="flex justify-between">
+              <span>2 x Cold Coffee</span>
+              <span class="price">₹140</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-total mt-4 pt-2 border-t border-gray-700">
+          <div class="flex justify-between">
+            <span>Total</span>
+            <span class="price">₹230</span>
+          </div>
+        </div>
+        <div class="order-actions mt-4 flex justify-between">
+          <button class="reorder-btn">Reorder</button>
+          <button class="review-btn">Write Review</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="new-order-section mt-8" style="display: none;">
+      <h2 class="text-2xl mb-4">Place a New Order</h2>
+      <p class="mb-4">Select items from our menu to place a new order:</p>
+      <a href="order-selection.html" class="view-menu-btn">Start Ordering</a>
+      
+      <div class="quick-order-items mt-6">
+        <h3 class="text-xl mb-4">Quick Order Popular Items</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="quick-order-item">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4>Veg Fried Rice</h4>
+                <p class="text-sm">Delicious fried rice with fresh vegetables</p>
+                <span class="price">₹90</span>
+              </div>
+              <div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="quick-order-item">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4>Paneer Momos (8 Pcs)</h4>
+                <p class="text-sm">Steamed momos with paneer filling</p>
+                <span class="price">₹90</span>
+              </div>
+              <div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="quick-order-item">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4>Chilli Potato</h4>
+                <p class="text-sm">Spicy potato fries with special sauce</p>
+                <span class="price">₹70</span>
+              </div>
+              <div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="quick-order-item">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4>Mix Pizza (Small)</h4>
+                <p class="text-sm">Pizza with mixed toppings</p>
+                <span class="price">₹100</span>
+              </div>
+              <div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <p>© 2023 HR New Student Cafe Fast Food. All rights reserved.</p>
+    </div>
+    <div class="mt-2">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="mt-2">
+      <p>Contact: 8950781137</p>
+    </div>
+  </div>
+</body>
+</html> 

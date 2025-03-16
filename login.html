@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>HR New Student Cafe - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="p-4">
+  <div class="navbar">
+    <div class="logo">
+      <img alt="HR Hotel Logo" height="50" src="https://storage.googleapis.com/a1aa/image/xYzm5YdqYBOi3v3IQFs6dH7cw1dhlZta1q1CgajPlnk.jpg" width="50"/>
+    </div>
+    <div class="flex">
+      <a href="home.html">Home</a>
+      <a href="settings.html">Settings</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div>
+      <a class="mr-4 active" href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="auth-container mt-8">
+    <div class="auth-card">
+      <div class="text-center mb-6">
+        <h1 class="text-3xl font-bold">Login to Your Account</h1>
+        <p class="text-gray-400 mt-2">Welcome back! Please enter your details</p>
+      </div>
+      
+      <form class="auth-form">
+        <div class="form-group mb-4">
+          <label for="email" class="block mb-2">Email or Phone</label>
+          <div class="input-with-icon">
+            <i class="fas fa-user input-icon"></i>
+            <input type="text" id="email" class="auth-input" placeholder="Enter your email or phone">
+          </div>
+        </div>
+        
+        <div class="form-group mb-4">
+          <label for="password" class="block mb-2">Password</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="password" class="auth-input" placeholder="Enter your password">
+          </div>
+        </div>
+        
+        <div class="flex justify-between items-center mb-6">
+          <label class="flex items-center">
+            <input type="checkbox" class="mr-2">
+            Remember me
+          </label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="auth-btn">Login</button>
+        
+        <div class="text-center mt-6">
+          <p>Don't have an account? <a href="signup.html" class="auth-link">Sign up</a></p>
+        </div>
+      </form>
+      
+      <div class="social-login mt-8">
+        <div class="divider">
+          <span>Or continue with</span>
+        </div>
+        
+        <div class="social-buttons mt-4">
+          <button class="social-btn">
+            <i class="fab fa-google"></i>
+            <span>Google</span>
+          </button>
+          <button class="social-btn">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+          </button>
+          <button class="social-btn">
+            <i class="fab fa-phone"></i>
+            <span>OTP</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <p>© 2023 HR New Student Cafe Fast Food. All rights reserved.</p>
+    </div>
+    <div class="mt-2">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="mt-2">
+      <p>Contact: 8950781137</p>
+    </div>
+  </div>
+</body>
+</html> 

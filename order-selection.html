@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>HR New Student Cafe - Order Selection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="p-4">
+  <div class="navbar">
+    <div class="logo">
+      <img alt="HR Hotel Logo" height="50" src="https://storage.googleapis.com/a1aa/image/xYzm5YdqYBOi3v3IQFs6dH7cw1dhlZta1q1CgajPlnk.jpg" width="50"/>
+    </div>
+    <div class="flex">
+      <a href="home.html">Home</a>
+      <a href="settings.html">Settings</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html" class="active">Orders</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div>
+      <a class="mr-4" href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="order-selection-container mt-8">
+    <h1 class="text-3xl text-center mb-4">Place Your Order</h1>
+    <p class="text-center text-gray-400 mb-8">Select items from our menu to add to your cart</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Left Column: Menu Categories -->
+      <div class="menu-categories">
+        <h2 class="text-xl mb-4">Categories</h2>
+        <div class="category-list">
+          <button class="category-btn active" data-category="popular">Popular Items</button>
+          <button class="category-btn" data-category="pizza">Pizza</button>
+          <button class="category-btn" data-category="burger">Burger</button>
+          <button class="category-btn" data-category="momos">Momos</button>
+          <button class="category-btn" data-category="fried-rice">Fried Rice</button>
+          <button class="category-btn" data-category="chowmein">Chowmein</button>
+          <button class="category-btn" data-category="snacks">Snacks</button>
+          <button class="category-btn" data-category="drinks">Drinks</button>
+        </div>
+      </div>
+      
+      <!-- Middle Column: Menu Items -->
+      <div class="menu-items">
+        <h2 class="text-xl mb-4">Menu Items</h2>
+        <div class="search-bar mb-4">
+          <div class="input-with-icon">
+            <i class="fas fa-search input-icon"></i>
+            <input type="text" class="search-input" placeholder="Search menu items...">
+          </div>
+        </div>
+        
+        <div class="menu-items-list">
+          <!-- Popular Items -->
+          <div class="menu-category-items" data-category="popular">
+            <div class="menu-item-card">
+              <div class="menu-item-image">
+                <img src="https://storage.googleapis.com/a1aa/image/kUY_2McyIyrXqYdaPqBnR3hKP_NyJDFaaNs4du0FEDs.jpg" alt="Mix Pizza">
+              </div>
+              <div class="menu-item-details">
+                <h3>Mix Pizza</h3>
+                <p class="text-sm text-gray-400">Delicious pizza with mixed toppings</p>
+                <div class="flex justify-between items-center mt-2">
+                  <span class="price">₹100</span>
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="menu-item-card">
+              <div class="menu-item-image">
+                <img src="https://storage.googleapis.com/a1aa/image/peVeyk0ATY2p3CFMwsHG2iM8-JukZbK3oOfCoGJU54I.jpg" alt="Veg Momos">
+              </div>
+              <div class="menu-item-details">
+                <h3>Veg Steam Momos</h3>
+                <p class="text-sm text-gray-400">8 pieces of steamed momos</p>
+                <div class="flex justify-between items-center mt-2">
+                  <span class="price">₹70</span>
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="menu-item-card">
+              <div class="menu-item-image">
+                <img src="https://storage.googleapis.com/a1aa/image/eitwRYdihhJpPH8VJ7eQYyxkeCmU-be2CZoaG7cjsYs.jpg" alt="Chilli Potato">
+              </div>
+              <div class="menu-item-details">
+                <h3>Chilli Potato</h3>
+                <p class="text-sm text-gray-400">Spicy potato fries with special sauce</p>
+                <div class="flex justify-between items-center mt-2">
+                  <span class="price">₹70</span>
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pizza Items -->
+          <div class="menu-category-items hidden" data-category="pizza">
+            <div class="menu-item-card">
+              <div class="menu-item-image">
+                <img src="https://storage.googleapis.com/a1aa/image/kUY_2McyIyrXqYdaPqBnR3hKP_NyJDFaaNs4du0FEDs.jpg" alt="Onion Pizza">
+              </div>
+              <div class="menu-item-details">
+                <h3>Onion Pizza (Small)</h3>
+                <p class="text-sm text-gray-400">Fresh onion toppings</p>
+                <div class="flex justify-between items-center mt-2">
+                  <span class="price">₹90</span>
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="menu-item-card">
+              <div class="menu-item-image">
+                <img src="https://storage.googleapis.com/a1aa/image/kUY_2McyIyrXqYdaPqBnR3hKP_NyJDFaaNs4du0FEDs.jpg" alt="Tomato Pizza">
+              </div>
+              <div class="menu-item-details">
+                <h3>Tomato Pizza (Small)</h3>
+                <p class="text-sm text-gray-400">Fresh tomato toppings</p>
+                <div class="flex justify-between items-center mt-2">
+                  <span class="price">₹80</span>
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="menu-item-card">
+              <div class="menu-item-image">
+                <img src="https://storage.googleapis.com/a1aa/image/kUY_2McyIyrXqYdaPqBnR3hKP_NyJDFaaNs4du0FEDs.jpg" alt="Mix Pizza">
+              </div>
+              <div class="menu-item-details">
+                <h3>Mix Pizza (Small)</h3>
+                <p class="text-sm text-gray-400">Mixed toppings</p>
+                <div class="flex justify-between items-center mt-2">
+                  <span class="price">₹100</span>
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="menu-item-card">
+              <div class="menu-item-image">
+                <img src="https://storage.googleapis.com/a1aa/image/kUY_2McyIyrXqYdaPqBnR3hKP_NyJDFaaNs4du0FEDs.jpg" alt="Double Cheese Pizza">
+              </div>
+              <div class="menu-item-details">
+                <h3>Double Cheese Pizza (Small)</h3>
+                <p class="text-sm text-gray-400">Extra cheese toppings</p>
+                <div class="flex justify-between items-center mt-2">
+                  <span class="price">₹120</span>
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="0" min="0" max="10">
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- More category items would be added here -->
+        </div>
+      </div>
+      
+      <!-- Right Column: Cart -->
+      <div class="cart-section">
+        <h2 class="text-xl mb-4">Your Cart</h2>
+        <div class="cart-items">
+          <!-- Cart items will be added dynamically -->
+          <div class="empty-cart text-center py-8">
+            <i class="fas fa-shopping-cart text-4xl text-gray-500 mb-2"></i>
+            <p>Your cart is empty</p>
+            <p class="text-sm text-gray-400 mt-2">Add items from the menu to place an order</p>
+          </div>
+          
+          <!-- Example of cart items (initially hidden) -->
+          <div class="cart-items-list hidden">
+            <!-- Cart item example -->
+            <div class="cart-item">
+              <div class="flex justify-between">
+                <div>
+                  <h4>Mix Pizza</h4>
+                  <div class="flex items-center">
+                    <div class="quantity-selector small">
+                      <button class="quantity-btn minus">-</button>
+                      <input type="number" class="quantity-input" value="1" min="0" max="10">
+                      <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="remove-btn ml-2">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span class="price">₹100</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- More cart items would be added dynamically -->
+          </div>
+        </div>
+        
+        <div class="cart-summary mt-4 pt-4 border-t border-gray-700">
+          <div class="flex justify-between mb-2">
+            <span>Subtotal</span>
+            <span class="price">₹0</span>
+          </div>
+          <div class="flex justify-between mb-2">
+            <span>Delivery Fee</span>
+            <span class="price">₹20</span>
+          </div>
+          <div class="flex justify-between font-bold">
+            <span>Total</span>
+            <span class="price">₹20</span>
+          </div>
+        </div>
+        
+        <div class="mt-4">
+          <button class="checkout-btn">
+            Proceed to Checkout
+          </button>
+        </div>
+        
+        <div class="delivery-options mt-6">
+          <h3 class="text-lg mb-2">Delivery Options</h3>
+          <div class="flex items-center mb-2">
+            <input type="radio" id="delivery" name="delivery-option" checked class="mr-2">
+            <label for="delivery">Delivery</label>
+          </div>
+          <div class="flex items-center">
+            <input type="radio" id="pickup" name="delivery-option" class="mr-2">
+            <label for="pickup">Pickup</label>
+          </div>
+        </div>
+        
+        <div class="promo-code mt-6">
+          <h3 class="text-lg mb-2">Promo Code</h3>
+          <div class="flex">
+            <input type="text" class="promo-input" placeholder="Enter promo code">
+            <button class="apply-btn">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <p>© 2023 HR New Student Cafe Fast Food. All rights reserved.</p>
+    </div>
+    <div class="mt-2">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="mt-2">
+      <p>Contact: 8950781137</p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for order selection functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Category selection
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const categoryItems = document.querySelectorAll('.menu-category-items');
+      
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          // Hide all category items
+          categoryItems.forEach(item => item.classList.add('hidden'));
+          
+          // Show selected category items
+          const category = this.getAttribute('data-category');
+          document.querySelector(`.menu-category-items[data-category="${category}"]`).classList.remove('hidden');
+        });
+      });
+      
+      // Quantity selectors
+      const quantitySelectors = document.querySelectorAll('.quantity-selector');
+      
+      quantitySelectors.forEach(selector => {
+        const minusBtn = selector.querySelector('.minus');
+        const plusBtn = selector.querySelector('.plus');
+        const input = selector.querySelector('.quantity-input');
+        
+        minusBtn.addEventListener('click', function() {
+          let value = parseInt(input.value);
+          if (value > 0) {
+            input.value = value - 1;
+            updateCart();
+          }
+        });
+        
+        plusBtn.addEventListener('click', function() {
+          let value = parseInt(input.value);
+          if (value < 10) {
+            input.value = value + 1;
+            updateCart();
+          }
+        });
+        
+        input.addEventListener('change', function() {
+          updateCart();
+        });
+      });
+      
+      // Search functionality
+      const searchInput = document.querySelector('.search-input');
+      const menuItemCards = document.querySelectorAll('.menu-item-card');
+      
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        menuItemCards.forEach(card => {
+          const itemName = card.querySelector('h3').textContent.toLowerCase();
+          const itemDescription = card.querySelector('p').textContent.toLowerCase();
+          
+          if (itemName.includes(searchTerm) || itemDescription.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+      
+      // Cart functionality
+      function updateCart() {
+        const cartItemsList = document.querySelector('.cart-items-list');
+        const emptyCart = document.querySelector('.empty-cart');
+        let hasItems = false;
+        
+        // Check if any items have quantity > 0
+        document.querySelectorAll('.menu-item-card').forEach(card => {
+          const quantity = parseInt(card.querySelector('.quantity-input').value);
+          if (quantity > 0) {
+            hasItems = true;
+          }
+        });
+        
+        // Show/hide cart sections
+        if (hasItems) {
+          cartItemsList.classList.remove('hidden');
+          emptyCart.classList.add('hidden');
+        } else {
+          cartItemsList.classList.add('hidden');
+          emptyCart.classList.remove('hidden');
+        }
+        
+        // Update cart total (simplified for demo)
+        // In a real app, you would calculate based on actual items
+      }
+      
+      // Checkout button
+      const checkoutBtn = document.querySelector('.checkout-btn');
+      
+      checkoutBtn.addEventListener('click', function() {
+        alert('Proceeding to checkout!');
+        // In a real app, you would redirect to checkout page
+      });
+    });
+  </script>
+</body>
+</html> 

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta name="theme-color" content="#ff6347"/>
   <title>HR New Student Cafe - Orders</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
@@ -13,6 +14,11 @@
   <div class="navbar">
     <div class="logo">
       <img alt="HR Hotel Logo" height="50" src="https://storage.googleapis.com/a1aa/image/xYzm5YdqYBOi3v3IQFs6dH7cw1dhlZta1q1CgajPlnk.jpg" width="50"/>
+    </div>
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     <div class="flex">
       <a href="home.html">Home</a>
@@ -191,5 +197,50 @@
       <p>Contact: 8950781137</p>
     </div>
   </div>
+
+  <script>
+    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger-menu');
+      const navMenu = document.querySelector('.navbar .flex');
+      const navAuth = document.querySelector('.navbar > div:last-child');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        navAuth.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on a link
+      document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+          navAuth.classList.remove('active');
+        });
+      });
+      
+      // Order tab functionality
+      const orderTabs = document.querySelectorAll('.order-tabs button');
+      const orderSections = document.querySelectorAll('.order-section');
+      
+      orderTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all tabs and hide all sections
+          orderTabs.forEach(t => t.classList.remove('active'));
+          orderSections.forEach(s => s.style.display = 'none');
+          
+          // Add active class to clicked tab and show corresponding section
+          tab.classList.add('active');
+          orderSections[index].style.display = 'block';
+        });
+      });
+      
+      // Set first tab as active by default
+      if (orderTabs.length > 0) {
+        orderTabs[0].click();
+      }
+    });
+  </script>
 </body>
 </html> 

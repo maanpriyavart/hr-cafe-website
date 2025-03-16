@@ -576,4 +576,324 @@ body {
 }
 .hidden {
     display: none;
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0.75rem;
+    }
+    
+    .navbar .logo {
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar .flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+    
+    .navbar a {
+        margin: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .menu-section {
+        margin: 0.5rem;
+        padding: 0.75rem;
+    }
+    
+    .featured-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .order-tabs {
+        flex-direction: column;
+    }
+    
+    .order-tabs .tab-btn {
+        margin: 0.25rem 0;
+        width: 100%;
+    }
+    
+    .order-header {
+        flex-direction: column;
+    }
+    
+    .order-status {
+        margin-top: 0.5rem;
+    }
+    
+    .order-actions {
+        flex-direction: column;
+    }
+    
+    .order-actions button {
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+    
+    .menu-item-card {
+        flex-direction: column;
+    }
+    
+    .menu-item-image {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .quantity-selector.small {
+        transform: none;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+    }
+    
+    .social-btn {
+        margin: 0.25rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .navbar a {
+        font-size: 0.8rem;
+        margin: 0.25rem;
+    }
+    
+    .hero-section .text-4xl {
+        font-size: 1.75rem;
+    }
+    
+    .hero-content .text-3xl {
+        font-size: 1.5rem;
+    }
+    
+    .flex.justify-center {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .order-now-btn {
+        margin: 0.5rem 0 !important;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu-item {
+        flex-direction: column;
+    }
+    
+    .menu-item div:last-child {
+        margin-top: 0.25rem;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+    }
+    
+    .cart-item .flex {
+        flex-direction: column;
+    }
+    
+    .cart-item .text-right {
+        text-align: left;
+        margin-top: 0.5rem;
+    }
+    
+    .delivery-options, .promo-code {
+        margin-top: 1rem;
+    }
+    
+    .promo-code .flex {
+        flex-direction: column;
+    }
+    
+    .promo-input, .apply-btn {
+        width: 100%;
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Improved Scrolling for Menu Categories */
+.menu-categories {
+    max-height: 500px;
+    overflow-y: auto;
+    position: sticky;
+    top: 1rem;
+}
+
+.menu-items-list {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.cart-section {
+    position: sticky;
+    top: 1rem;
+}
+
+/* Responsive Cart */
+@media (max-width: 768px) {
+    .cart-section {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        border-radius: 0.5rem 0.5rem 0 0;
+        max-height: 50vh;
+        overflow-y: auto;
+        transform: translateY(calc(100% - 3rem));
+        transition: transform 0.3s ease;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cart-section.expanded {
+        transform: translateY(0);
+    }
+    
+    .cart-toggle {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 5px;
+        background-color: #555;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .order-selection-container {
+        padding-bottom: 4rem;
+    }
+}
+
+/* Improved Touch Targets for Mobile */
+@media (max-width: 768px) {
+    .quantity-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .quantity-input {
+        width: 50px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .category-btn {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .checkout-btn, .auth-btn, .save-btn, .submit-btn {
+        padding: 1rem;
+    }
+}
+
+/* Improved Accessibility */
+.quantity-btn:focus, .category-btn:focus, .checkout-btn:focus, 
+.auth-btn:focus, .save-btn:focus, .submit-btn:focus,
+.tab-btn:focus, .social-btn:focus, .apply-btn:focus {
+    outline: 2px solid #ffd700;
+    outline-offset: 2px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid #ffd700;
+    border-color: #ffd700;
+}
+
+/* Dark Mode Optimization */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+    }
+    
+    .menu-section, .menu-item-card, .cart-item, 
+    .auth-card, .settings-section, .contact-info, 
+    .contact-form, .order-card, .featured-item, 
+    .about-content, .menu-categories, .menu-items, 
+    .cart-section {
+        background-color: #1e1e1e;
+    }
+    
+    .search-input, .auth-input, .settings-input, 
+    .contact-input, .promo-input, .quantity-input {
+        background-color: #2a2a2a;
+    }
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+    }
+    
+    .navbar .flex {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .navbar .flex.active {
+        display: flex;
+    }
+    
+    .navbar > div:last-child {
+        display: none;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+    
+    .navbar > div:last-child.active {
+        display: flex;
+    }
+    
+    .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
 } 
